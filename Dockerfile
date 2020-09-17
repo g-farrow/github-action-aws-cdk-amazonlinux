@@ -1,4 +1,4 @@
-FROM amazonlinux:latest
+FROM amazonlinux:2
 
 LABEL name="github-action-aws-cdk-amazon-linux"
 LABEL repository="https://github.com/g-farrow/github-action-aws-cdk-amazon-linux"
