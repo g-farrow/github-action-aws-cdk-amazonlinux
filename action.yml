@@ -1,0 +1,8 @@
+name: 'github-action-aws-cdk-amazon-linux'
+description: 'GitHub Action for AWS CDK using amazonlinux'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'activity'
+  color: 'blue'
