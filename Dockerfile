@@ -9,7 +9,9 @@ LABEL "com.github.actions.description"="GitHub Action for AWS CDK based on amazo
 LABEL "com.github.actions.icon"="activity"
 LABEL "com.github.actions.color"="blue"
 
-#RUN yum install nodejs nodejs-npm python3 py3-pip
+#RUN yum install nodejs-npm python3 py3-pip
+RUN curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
+RUN yum -y install nodejs
 RUN npm install -g aws-cdk
 #RUN pip3 install aws-cdk.core
 
