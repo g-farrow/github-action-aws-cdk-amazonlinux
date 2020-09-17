@@ -11,7 +11,7 @@ LABEL "com.github.actions.color"="blue"
 
 #RUN yum install nodejs-npm python3 py3-pip
 RUN curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
-RUN yum -y install nodejs
+RUN yum -y install nodejs python3-pip
 RUN npm install -g aws-cdk
 #RUN pip3 install aws-cdk.core
 
