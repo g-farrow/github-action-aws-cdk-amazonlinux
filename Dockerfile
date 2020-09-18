@@ -13,9 +13,9 @@ RUN yum -y update
 RUN curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
 RUN yum -y install nodejs python3-pip libffi libffi-devel openssl-devel redhat-rpm-config gcc python3-devel
 RUN npm install -g aws-cdk
-#RUN pip3 install aws-cdk.core
+RUN python3 --version
 
 COPY entrypoint.sh /entrypoint.sh
 RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["python3 --version"]
+CMD ["--help"]
