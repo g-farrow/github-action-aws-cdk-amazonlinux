@@ -9,7 +9,6 @@ LABEL "com.github.actions.description"="GitHub Action for AWS CDK based on amazo
 LABEL "com.github.actions.icon"="activity"
 LABEL "com.github.actions.color"="blue"
 
-#RUN yum install nodejs-npm python3 py3-pip
 RUN yum -y update
 RUN curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
 RUN yum -y install nodejs python3-pip libffi libffi-devel openssl-devel redhat-rpm-config gcc python3-devel
@@ -19,4 +18,4 @@ RUN npm install -g aws-cdk
 COPY entrypoint.sh /entrypoint.sh
 RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["--help"]
+CMD ["python3 --version"]
