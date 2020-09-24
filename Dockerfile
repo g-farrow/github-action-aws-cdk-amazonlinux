@@ -11,7 +11,7 @@ LABEL "com.github.actions.color"="blue"
 
 RUN yum -y update
 RUN curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
-RUN yum -y install nodejs python3-pip libffi libffi-devel openssl-devel redhat-rpm-config gcc python3-devel
+RUN yum -y install nodejs python3-pip
 RUN npm install -g aws-cdk
 RUN python3 --version
 
